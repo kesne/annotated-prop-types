@@ -1,0 +1,33 @@
+{
+  "name": "annotated-prop-types",
+  "version": "0.1.0",
+  "description": "Add extra info to your React PropTypes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kesne/annotated-prop-types.git"
+  },
+  "keywords": [
+    "react",
+    "proptypes",
+    "prop",
+    "types",
+    "annotated"
+  ],
+  "author": "Jordan Gensler <jordangens@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kesne/annotated-prop-types/issues"
+  },
+  "homepage": "https://github.com/kesne/annotated-prop-types#readme",
+  "devDependencies": {
+    "react": "^15.3.0",
+    "tape": "^4.6.0"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0"
+  }
+}
