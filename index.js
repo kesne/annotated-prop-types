@@ -1,12 +1,12 @@
 'use strict';
 
-const React = require('react');
+var React = require('react');
 
 // Stash the original PropTypes so that we can call them later:
-const OriginalPropTypes = React.PropTypes;
+var OriginalPropTypes = React.PropTypes;
 
 function createAnnotatedPropType(name) {
-  const propType = OriginalPropTypes[name];
+  var propType = OriginalPropTypes[name];
 
   // Add the metadata we want on the propType:
   propType.typeName = name;
@@ -19,7 +19,7 @@ function createAnnotatedPropType(name) {
 
 function createOfProptype(name) {
   return function(typeChecker) {
-    const propType = OriginalPropTypes[name](typeChecker);
+    var propType = OriginalPropTypes[name](typeChecker);
 
     // Add the metadata we want on the PropType:
     propType.typeName = name;
@@ -34,7 +34,7 @@ function createOfProptype(name) {
 }
 
 // Mirror the structure of React.PropTypes.
-const annotatedPropTypes = {
+var annotatedPropTypes = {
   // These typecheckers are just used directly.
   array: createAnnotatedPropType('array'),
   bool: createAnnotatedPropType('bool'),
