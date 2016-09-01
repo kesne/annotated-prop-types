@@ -1,6 +1,6 @@
 {
   "name": "annotated-prop-types",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Add extra info to your React PropTypes.",
   "main": "index.js",
   "scripts": {
