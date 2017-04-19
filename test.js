@@ -1,9 +1,8 @@
 const test = require('tape');
-const React = require('react');
+const PropTypes = require('prop-types');
 
-const OriginalPropTypes = React.PropTypes;
+const OriginalPropTypes = PropTypes;
 const annotatedPropTypes = require('./index');
-const PropTypes = React.PropTypes;
 
 test('overwrites Reacts PropTypes', function(t) {
   t.equal(PropTypes, annotatedPropTypes);

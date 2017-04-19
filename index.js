@@ -1,9 +1,9 @@
 'use strict';
 
-var React = require('react');
+var PropTypes = require('prop-types');
 
 // Stash the original PropTypes so that we can call them later:
-var OriginalPropTypes = React.PropTypes;
+var OriginalPropTypes = Object.assign({}, PropTypes);
 
 function createAnnotatedPropType(name) {
   var propType = OriginalPropTypes[name];
@@ -33,7 +33,7 @@ function createOfProptype(name) {
   };
 }
 
-// Mirror the structure of React.PropTypes.
+// Mirror the structure of PropTypes.
 var annotatedPropTypes = {
   // These typecheckers are just used directly.
   array: createAnnotatedPropType('array'),
@@ -56,8 +56,8 @@ var annotatedPropTypes = {
   shape: createOfProptype('shape'),
 };
 
-// Overwrite the PropTypes on React:
-React.PropTypes = annotatedPropTypes;
+// Overwrite the PropTypes:
+const exportTypes = Object.assign(PropTypes, annotatedPropTypes);
 
 // Export our new PropTypes:
-module.exports = annotatedPropTypes;
+module.exports = exportTypes;

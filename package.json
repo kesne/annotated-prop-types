@@ -24,10 +24,9 @@
   },
   "homepage": "https://github.com/kesne/annotated-prop-types#readme",
   "devDependencies": {
-    "react": "^15.3.0",
     "tape": "^4.6.0"
   },
-  "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+  "dependencies": {
+    "prop-types": "*"
   }
 }
